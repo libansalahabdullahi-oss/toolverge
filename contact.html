@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — ToolVerge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="sq"></span>ToolVerge</a>
+    <div class="navlinks">
+      <a href="index.html#log">How We Test</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="index.html#signal">The Signal</a>
+    </div>
+    <a href="contact.html" class="nav-cta">CONTACT</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="eyebrow"><span class="blip"></span>Get In Touch</div>
+    <h1>Found an error, or want us to test something?</h1>
+    <p class="lede">We correct scores when we're wrong, and we take tool suggestions from readers seriously.</p>
+  </div>
+</header>
+
+<section class="prose">
+  <div class="wrap" style="max-width:1000px;">
+    <div class="contact-wrap">
+      <div>
+        <form class="contact-form" id="contactForm">
+          <label for="name">Your name</label>
+          <input type="text" id="name" required placeholder="Full name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="you@email.com">
+
+          <label for="topic">Topic</label>
+          <input type="text" id="topic" placeholder="e.g. Suggest a tool to test">
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" required placeholder="What's on your mind..."></textarea>
+
+          <button type="submit">SEND MESSAGE</button>
+          <div id="formMsg" class="mono" style="margin-top:12px; font-size:12px; color:var(--flag);"></div>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Other ways to reach us</h3>
+        <p>For partnership or advertising inquiries, use the form and mark the topic — we don't let those influence scores, but we do read them.</p>
+        <div class="row"><span>Response time</span><span>2–3 business days</span></div>
+        <div class="row"><span>Score corrections</span><span>Priority reviewed</span></div>
+        <div class="row"><span>Tool suggestions</span><span>Added to test queue</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="index.html" class="logo"><span class="sq"></span>ToolVerge</a>
+      <div class="foot-links">
+        <div>
+          <h4>Read</h4>
+          <a href="index.html#log">How We Test</a>
+          <a href="reviews.html">Reviews</a>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ToolVerge. Independent AI tool testing.</span>
+      <span>No sponsored scores.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('formMsg').textContent = '> message received — we reply within 2-3 business days';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
